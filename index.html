@@ -14,13 +14,13 @@ function currentTime() {
   var hour = date.getHours();
   var min = date.getMinutes();
   var sec = date.getSeconds();
-} 
-
-function currentTime() {
+  
   hour = updateTime(hour);
   min = updateTime(min);
   sec = updateTime(sec);
-}
+  
+  var t = setTimeout(function(){ currentTime() }, 1000);
+} 
 
 function updateTime(j) {
   if (j < 10) {
@@ -30,9 +30,10 @@ function updateTime(j) {
     return j;
   }
 }
-
+   
+document.getElementById("clock").innerHTML = hour + " : " + min + " : " + sec;
 currentTime();
 </script>
-document.getElementById("clock").innerHTML = hour + " : " + min + " : " + sec;
+
 
 </html>
