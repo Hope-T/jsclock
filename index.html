@@ -1,0 +1,32 @@
+<html>
+
+  <div id="clock"></div>
+ 
+ <script>
+function currentTime() {
+  var date = new Date(); 
+  var hour = date.getHours();
+  var min = date.getMinutes();
+  var sec = date.getSeconds();
+} 
+
+function currentTime() {
+  hour = updateTime(hour);
+  min = updateTime(min);
+  sec = updateTime(sec);
+}
+
+function updateTime(j) {
+  if (j < 10) {
+    return "0" + j;
+  }
+  else {
+    return j;
+  }
+}
+
+currentTime();
+</script>
+document.getElementById("clock").innerHTML = hour + " : " + min + " : " + sec;
+
+</html>
