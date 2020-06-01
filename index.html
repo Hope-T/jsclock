@@ -7,7 +7,6 @@
 <html>
 
   <div id="clock"></div>
-  document.getElementById("clock").innerHTML = hour + " : " + min + " : " + sec;
  
  <script>
 function currentTime() {
@@ -19,8 +18,9 @@ function currentTime() {
   hour = updateTime(hour);
   min = updateTime(min);
   sec = updateTime(sec);
-  
+ document.getElementById("clock").innerHTML = hour + " : " + min + " : " + sec;
   var t = setTimeout(function(){ currentTime() }, 1000);
+  
 } 
 
 function updateTime(j) {
@@ -33,6 +33,7 @@ function updateTime(j) {
 }
   
 currentTime();
+ 
 </script>
 
 
